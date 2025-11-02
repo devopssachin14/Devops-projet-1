@@ -18,7 +18,7 @@
     
     <% String error = (String) request.getAttribute("errorMsg"); %>
 	<% if (error != null) { %>
-	    <p class="error" style="color:red;"> <%= error %></p>
+	    <p class="error" style="color:red; margin-top: 10px;"> <%= error %></p>
 	<% } %>
 	
     <form action="loginServlet" method="post" class="emp-form login-form" >
