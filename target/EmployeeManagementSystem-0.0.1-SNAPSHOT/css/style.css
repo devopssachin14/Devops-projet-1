@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    background-color: #00bcd4;
+    color: white;
+    padding: 15px 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Navbar */
+nav {
+    background-color: #1a1a1a;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover {
+    transform: scale(1.2);
+}
+
+nav ul li span a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover span a {
+    color: #00bcd4;
+}
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #00bcd4;
+    transition: width 0.3s ease;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+/* Content Area */
+.content {
+    max-width: 600px;
+    background-color: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.content h3 {
+    color: #00bcd4;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.emp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.emp-form label {
+    font-weight: 500;
+    color: #333;
+}
+
+.emp-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.emp-form input:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px #00bcd4;
+}
+
+.emp-form button {
+    padding: 10px;
+    border: none;
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.emp-form button:hover {
+    background-color: #0097a7;
+}
+
+/* Delete button special */
+.delete-btn {
+    background-color: #e53935;
+}
+
+.delete-btn:hover {
+    background-color: #c62828;
+}
+
+/* Employee Table */
+.emp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.emp-table thead {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.emp-table th,
+.emp-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.emp-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.emp-table tr:hover {
+    background-color: #e0f7fa;
+    transition: 0.2s;
+}

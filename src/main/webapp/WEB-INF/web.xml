@@ -1,0 +1,62 @@
+
+	<web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4" id="WebApp_ID">
+
+		<servlet-mapping>
+			<servlet-name>addEmployeeServlet</servlet-name>
+			<url-pattern>/addEmployeeServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>addEmployeeServlet</servlet-name>
+			<servlet-class>com.ems.servlet.AddEmployeeServlet</servlet-class>
+		</servlet>
+
+		<servlet-mapping>
+			<servlet-name>updateEmployeeServlet</servlet-name>
+			<url-pattern>/updateEmployeeServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>updateEmployeeServlet</servlet-name>
+			<servlet-class>com.ems.servlet.UpdateEmployeeServlet</servlet-class>
+		</servlet>
+
+		<servlet-mapping>
+			<servlet-name>deleteEmployeeServlet</servlet-name>
+			<url-pattern>/deleteEmployeeServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>deleteEmployeeServlet</servlet-name>
+			<servlet-class>com.ems.servlet.DeleteEmployeeServlet</servlet-class>
+		</servlet>
+
+		<servlet-mapping>
+			<servlet-name>viewServlet</servlet-name>
+			<url-pattern>/listEmployeeServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>viewServlet</servlet-name>
+			<servlet-class>com.ems.servlet.ListEmployeeServlet</servlet-class>
+		</servlet>
+
+		<servlet-mapping>
+			<servlet-name>loginServlet</servlet-name>
+			<url-pattern>/loginServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+			<servlet-name>loginServlet</servlet-name>
+			<servlet-class>com.ems.servlet.LoginServlet</servlet-class>
+		</servlet>
+
+		
+
+
+		<servlet-mapping>
+			<servlet-name>logoutServlet</servlet-name>
+			<url-pattern>/logoutServlet</url-pattern>
+		</servlet-mapping>
+		<servlet>
+		    <servlet-name>logoutServlet</servlet-name>
+		    <servlet-class>com.ems.servlet.LogoutServlet</servlet-class>
+		</servlet>
+	</web-app>
