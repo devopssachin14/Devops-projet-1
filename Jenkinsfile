@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('gitcheckout') { 
             steps {
-                git branch: 'main', url: 'https://github.com/devopssachin14/december2025-java.git'
+                git branch: 'main', url: 'https://github.com/devopssachin14/Devops-projet-1.git'
             }
         }
         stage('maven-check') { 
