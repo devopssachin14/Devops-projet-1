@@ -4,7 +4,7 @@ pipeline {
     //     PATH = "/opt/maven/bin/:$PATH"
     // }
     tools {
-        maven '3.9.10'
+        maven '3.9.12'
     }
     stages {
         stage('gitcheckout') { 
