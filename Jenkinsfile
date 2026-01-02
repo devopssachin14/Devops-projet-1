@@ -26,7 +26,7 @@ pipeline {
         }
         stage('code review') { 
             steps {
-               withSonarQubeEnv(credentialsId: 'sonartoken', installationName: SonarQubeServer) {
+               withSonarQubeEnv(credentialsId: 'sonar-token', installationName: SonarQubeServer) {
                  sh "mvn clean verify sonar:sonar \
                     -Dsonar.projectKey=project \
                     -Dsonar.host.url=http://34.201.144.91:9000 \
