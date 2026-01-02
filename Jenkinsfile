@@ -1,15 +1,17 @@
+sqp_52e297725409cfe093234e0e95a6886449f0b976
+
 pipeline {
     agent any
     // environment {
     //     PATH = "/opt/maven/bin/:$PATH"
     // }
     tools {
-        maven '3.9.12'
+        maven '3.9.10'
     }
     stages {
         stage('gitcheckout') { 
             steps {
-                git branch: 'main', url: 'https://github.com/devopssachin14/Devops-projet-1.git'
+                git branch: 'main', url: 'https://github.com/devopssachin14/december2025-java.git'
             }
         }
         stage('maven-check') { 
@@ -27,6 +29,21 @@ pipeline {
         stage('validation') { 
             steps {
                 sh 'mvn validate'
+            }
+        }
+        stage('code review') { 
+            steps {
+                sh 'mvn validate'
+            }
+        }
+        stage('code review') { 
+            steps {
+               withSonarQubeEnv(credentialsId: 'sonartoken', InstallationName: SonarQubeServer) {
+    sh "mvn clean verify sonar:sonar \
+  -Dsonar.projectKey=project \
+  -Dsonar.host.url=http://34.201.144.91:9000 \
+  -Dsonar.login=sqp_52e297725409cfe093234e0e95a6886449f0b976"
+                }
             }
         }
     }
