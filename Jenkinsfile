@@ -1,5 +1,3 @@
-sqp_52e297725409cfe093234e0e95a6886449f0b976
-
 pipeline {
     agent any
     // environment {
