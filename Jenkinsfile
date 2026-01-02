@@ -24,11 +24,6 @@ pipeline {
                 sh 'mvn install'
             }
         }
-        stage('validation') { 
-            steps {
-                sh 'mvn validate'
-            }
-        }
         stage('code review') { 
             steps {
                withSonarQubeEnv(credentialsId: 'sonartoken', installationName: SonarQubeServer) {
